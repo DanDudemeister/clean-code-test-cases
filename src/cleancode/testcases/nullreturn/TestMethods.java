@@ -72,19 +72,6 @@ public class TestMethods {
     }
 
 
-    // return type already adapted
-
-    public Optional<Date> createDateFromStringAlreadyAdapted(String dateAsString) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-
-        try {
-            return Optional.ofNullable(formatter.parse(dateAsString));
-        } catch (ParseException e) {
-            return null;
-        }
-    }
-
-
     // declaration
 
     public String getAStringDeclaredWithNull() {
@@ -124,5 +111,28 @@ public class TestMethods {
 
     public String getAStringWithTernaryOperator(boolean bool) {
         return bool ? "true" : null;
+    }
+
+
+    // already refactored
+
+    public String getAStringAlreadyRefatored() {
+        return "";
+    }
+
+
+    public List<String> getAListAlreadyRefactored() {
+        return Collections.emptyList();
+    }
+
+
+    public Optional<Date> createDateFromStringAlreadyRefatored(String dateAsString) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            return Optional.ofNullable(formatter.parse(dateAsString));
+        } catch (ParseException e) {
+            return null;
+        }
     }
 }
