@@ -31,10 +31,10 @@ public class TestCalls {
 
 
         // already adapted
-        Optional<Date> optionalDate1 = testMethods.createDateFromStringAlreadyRefatored(DATE_AS_STRING);
+        Optional<Date> optionalDate1 = testMethods.createDateFromStringAlreadyRefactored(DATE_AS_STRING);
 
 
-        // methodreference
+        // method reference
         BiFunction<TestMethods, String, Date> createDateFromString1 = TestMethods::createDateFromString;
 
 
@@ -50,7 +50,7 @@ public class TestCalls {
 
 
         // non-generic Optional
-        Optional optionalDate2 = testMethods.createDateFromStringAlreadyRefatored(DATE_AS_STRING);
+        Optional optionalDate2 = testMethods.createDateFromStringAlreadyRefactored(DATE_AS_STRING);
 
 
         // method call inherited from object

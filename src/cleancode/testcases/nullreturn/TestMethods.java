@@ -116,7 +116,7 @@ public class TestMethods {
 
     // already refactored
 
-    public String getAStringAlreadyRefatored() {
+    public String getAStringAlreadyRefactored() {
         return "";
     }
 
@@ -126,7 +126,7 @@ public class TestMethods {
     }
 
 
-    public Optional<Date> createDateFromStringAlreadyRefatored(String dateAsString) {
+    public Optional<Date> createDateFromStringAlreadyRefactored(String dateAsString) {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
         try {
