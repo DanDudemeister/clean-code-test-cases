@@ -107,4 +107,17 @@ public class TestMethods {
             return null;
         }
     }
+
+    // misleadingly marked by the plugin
+    public String getAStringNonNull(boolean bool) {
+        String string = null;
+
+        if (bool) {
+            string = "true";
+        } else {
+            string = "false";
+        }
+
+        return string;
+    }
 }
