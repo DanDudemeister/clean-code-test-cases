@@ -109,15 +109,16 @@ public class TestMethods {
     }
 
     // misleadingly marked by the plugin
-    public String getAStringNonNull(boolean bool) {
-        String string = null;
+    public Date createDateFromStringNonNull(String dateAsString) {
+        Date parsedDate = null;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
-        if (bool) {
-            string = "true";
-        } else {
-            string = "false";
+        try {
+            parsedDate = formatter.parse(dateAsString);
+        } catch (ParseException e) {
+            parsedDate = new Date();
         }
 
-        return string;
+        return parsedDate;
     }
 }
